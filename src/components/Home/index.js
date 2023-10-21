@@ -1,15 +1,15 @@
-import { Link } from "react-router-dom/cjs/react-router-dom.min";
-import CreateButton from "./CreateButton";
+import React from "react";
+import CreateDeckButton from "./CreateDeckButton";
 import DisplayDecks from "./DisplayDecks";
-function Home()
-{
 
-    return (<>
-    <div>
-      <CreateButton />
+function Home() {
+  
+  return (
+    <div className="container">
+      <CreateDeckButton />
       <DisplayDecks />
     </div>
+  )
+} 
 
-    </>);
-}
 export default Home;

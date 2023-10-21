@@ -29,7 +29,10 @@ function DeckForm({ deck }) {
   async function handleCreate() {
     await createDeck(deckInfo);
     const response = await listDecks();
-    const newDeckId = response.reduce((max, item) => (item.id > max ? item.id : max), 0);
+    const newDeckId = response.reduce(
+      (max, item) => (item.id > max ? item.id : max),
+      0
+    );
     history.push(`/decks/${newDeckId}`);
   }
 
@@ -84,4 +87,5 @@ function DeckForm({ deck }) {
     </>
   );
 }
+
 export default DeckForm;
